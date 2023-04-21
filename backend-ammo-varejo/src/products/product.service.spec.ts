@@ -1,4 +1,3 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { ProductService } from './product.service';
 import { ProductGatewayInMemory } from './gateways/product-gateway-in-memory';
 
