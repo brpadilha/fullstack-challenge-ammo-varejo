@@ -8,7 +8,7 @@ export class ProductService {
     private productPersistenceGateway: ProductGatewayInterface,
   ) {}
 
-  findAll(req) {
+  findAll(req: any) {
     return this.productPersistenceGateway.findAll(req);
   }
 }
