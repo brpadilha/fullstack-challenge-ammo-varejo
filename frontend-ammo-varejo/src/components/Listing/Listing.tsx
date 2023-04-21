@@ -5,7 +5,7 @@ import { ProductContext } from '../../context/ProcutContext';
 import { Pagination } from "../Pagination/Pagination";
 
 
-const Error: {
+export const ErrorMessage: {
   [key: string]: string
 } = {
   ERR_NETWORK: 'Poxa não conseguimos se conectar com o servidor 😞',
@@ -20,10 +20,10 @@ export function Listing() {
       </ContainerHeader>
       <Container>
         {error &&
-          <h1>{Error[error]}</h1>
+          <h1>{ErrorMessage[error]}</h1>
         }
         {
-          products?.length === 0 ? <h1>Poxa não temos nenhum produto 😞</h1> :
+          products?.length === 0 ? <h1>Poxa não encontramos nenhum produto 😞</h1> :
             <>
               <ListProducts>
                 {products?.map(product => (
